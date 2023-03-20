@@ -22,6 +22,10 @@ body {
 
   min-height: 100vh;
 
+  gap: 100px;
+
+  padding-bottom: 100px;
+
   background: #242424;
   color: #fff;
 }
@@ -34,17 +38,27 @@ body {
 
   background: #12a6e0;
   border: 1px solid rgb(0, 0, 0);
+
+  transition: all 0.2s ease-in-out;
 }
 
-section {
+.flex-example {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
-  justify-content: center;
-  align-items: center;
+  height: 300px;
+  width: fit-content;
 
+  gap: 1rem;
+}
+
+.visuals {
+  display: flex;
+
+  padding: 30px;
   width: 500px;
-  /* min-height: 300px; */
+
+  position: relative;
 
   background: #ffffff;
   color: black;
@@ -54,14 +68,18 @@ section {
 
   box-shadow: 0 5px 10px rgba(97, 97, 97, 0.5);
 
-  margin: 20px;
-  padding: 30px;
+  z-index: 1;
+}
 
-  position: relative;
+.visuals > h2 {
+  position: absolute;
+
+  top: -50px;
+  color: white;
 }
 
 /* a border for the renderable area (i.e a box of the area inside the padding) */
-section::after {
+.visuals::after {
   content: "";
 
   display: block;
@@ -72,9 +90,16 @@ section::after {
 
   position: absolute;
 
-  border: 1px solid #000000;
+  border: 1px solid #0000002c;
   border-radius: 5px;
 
   /*  don't cover up any content */
   pointer-events: none;
+}
+
+.CodeMirror {
+  border-radius: 5px;
+
+  height: 100% !important;
+  width: 400px !important;
 }

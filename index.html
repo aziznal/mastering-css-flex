@@ -6,33 +6,266 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <!-- CodeMirror CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css"
+    />
+    <!-- CodeMirror theme (optional) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css"
+    />
   </head>
 
   <body>
-    <section>
-      <h1>No Flex (default styles)</h1>
+    <h1 class="site-title">Flexbox Playground</h1>
 
-      <div>
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
-      </div>
-    </section>
+    <!-- No Flex -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>No Flex (default styles)</h2>
+        <div>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </section>
 
-    <section>
-      <h1>Flex</h1>
+      <section class="code">
+        <style id="no-flex-example">
+          /* nothing ... */
+        </style>
 
-      <div style="display: flex; flex-direction: row">
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
-      </div>
-    </section>
+        <textarea data-target="no-flex-example"> </textarea>
+      </section>
+    </div>
 
-    <section></section>
+    <!-- Flex -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex</h2>
+        <div id="flex">
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="basic-flex-example">
+          #flex {
+            display: flex;
+            flex-direction: row;
+          }
+        </style>
+
+        <textarea data-target="basic-flex-example"></textarea>
+      </section>
+    </div>
+
+    <!-- Flex Row (no wrap) -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Row (no wrap)</h2>
+        <div id="flex-row-no-wrap">
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="flex-row-no-wrap-styles">
+          /*
+          * You found me!
+          *
+          */
+
+          #flex-row-no-wrap {
+            display: flex;
+            flex-flow: row nowrap;
+          }
+        </style>
+
+        <textarea data-target="flex-row-no-wrap-styles"> </textarea>
+      </section>
+    </div>
+
+    <!-- Flex Row (with wrap) -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Row (with wrap)</h2>
+        <div id="flex-row-wrap">
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="flex-row-wrap-styles">
+          #flex-row-wrap {
+            display: flex;
+            flex-flow: row wrap;
+          }
+        </style>
+        <textarea data-target="flex-row-wrap-styles"> </textarea>
+      </section>
+    </div>
+
+    <!-- Additional sections -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Order</h2>
+        <!-- Add your visuals here -->
+      </section>
+
+      <section class="code">
+        <style id="flex-order-styles"></style>
+        <textarea data-target="flex-order-styles"> </textarea>
+      </section>
+    </div>
+
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex "Flex" Property</h2>
+        <!-- Add your visuals here -->
+      </section>
+
+      <section class="code">
+        <style id="flex-flex_property-styles"></style>
+        <textarea data-target="flex-flex_property-styles"> </textarea>
+      </section>
+    </div>
+
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Grow</h2>
+        <!-- Add your visuals here -->
+      </section>
+
+      <section class="code">
+        <style id="flex-grow-styles"></style>
+        <textarea data-target="flex-grow-styles"> </textarea>
+      </section>
+    </div>
+
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Shrink</h2>
+        <!-- Add your visuals here -->
+      </section>
+      <section class="code">
+        <style id="flex-shrink-styles"></style>
+        <textarea data-target="flex-shrink-styles"> </textarea>
+      </section>
+    </div>
+
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Basis</h2>
+        <!-- Add your visuals here -->
+      </section>
+
+      <section class="code">
+        <style id="flex-basis-styles"></style>
+        <textarea data-target="flex-basis-styles"> </textarea>
+      </section>
+    </div>
+
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Align-Self</h2>
+        <!-- Add your visuals here -->
+      </section>
+
+      <section class="code">
+        <style id="flex-align-self-styles"></style>
+        <textarea data-target="flex-align-self-styles"> </textarea>
+      </section>
+    </div>
+
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Align-Items Stretch</h2>
+        <!-- Add your visuals here -->
+      </section>
+
+      <section class="code">
+        <style id="flex-align-items-stretched-styles"></style>
+        <textarea data-target="flex-align-items-stretched-styles"> </textarea>
+      </section>
+    </div>
   </body>
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <!-- CodeMirror mode for CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+
+  <!-- CSS syntax highlighting and live-edit -->
+  <script>
+    function trimLeadingWhitespace(text) {
+      const lines = text.split("\n");
+      const minIndent = lines
+        .filter((line) => line.trim().length > 0)
+        .reduce(
+          (min, line) => Math.min(min, line.match(/^\s*/)[0].length),
+          Infinity
+        );
+
+      return lines
+        .map((line) => line.slice(minIndent))
+        .join("\n")
+        .trim();
+    }
+
+    document.querySelectorAll("textarea[data-target]").forEach((textarea) => {
+      const targetStyleId = textarea.getAttribute("data-target");
+      const targetStyle = document.getElementById(targetStyleId);
+
+      // Copy initial styles from the <style> block to the editor
+      textarea.textContent = trimLeadingWhitespace(targetStyle.textContent);
+
+      const codeMirrorInstance = CodeMirror.fromTextArea(textarea, {
+        mode: "css",
+        theme: "dracula", // Optional theme
+        lineNumbers: true,
+        lineWrapping: true,
+      });
+
+      // Update live styles when the editor content changes
+      codeMirrorInstance.on("change", (editor) => {
+        targetStyle.textContent = editor.getValue();
+      });
+
+      // Set initial content of the live styles
+      targetStyle.textContent = codeMirrorInstance.getValue();
+    });
+  </script>
 </html>
