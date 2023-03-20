@@ -1,0 +1,80 @@
+/* minor reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: #fff;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: #242424;
+  color: #fff;
+}
+
+.box {
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  background: #12a6e0;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  /* min-height: 300px; */
+
+  background: #ffffff;
+  color: black;
+
+  border: 1px solid #000000;
+  border-radius: 5px;
+
+  box-shadow: 0 5px 10px rgba(97, 97, 97, 0.5);
+
+  margin: 20px;
+  padding: 30px;
+
+  position: relative;
+}
+
+/* a border for the renderable area (i.e a box of the area inside the padding) */
+section::after {
+  content: "";
+
+  display: block;
+
+  /* calc width and height minus padding */
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+
+  position: absolute;
+
+  border: 1px solid #000000;
+  border-radius: 5px;
+
+  /*  don't cover up any content */
+  pointer-events: none;
+}
