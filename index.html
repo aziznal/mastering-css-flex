@@ -49,7 +49,9 @@
         <textarea data-target="no-flex-example"> </textarea>
       </section>
 
-      <p class="description">Ain't nothing here.</p>
+      <p class="description">
+        Block elements are stacked on top of each other by default.
+      </p>
     </div>
 
     <!-- Flex -->
@@ -77,7 +79,43 @@
         <textarea data-target="basic-flex-example"></textarea>
       </section>
 
-      <p class="description">Ain't nothing here.</p>
+      <p class="description">
+        Flex allows us to control the layout of the children elements. Try
+        changing the flex-direction to <code>column</code>.
+      </p>
+    </div>
+
+    <!-- Flex with Gap -->
+    <div class="flex-example">
+      <h2 class="title">Flex with Gap</h2>
+
+      <section class="visuals">
+        <div id="flex-gap">
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="flex-gap-example">
+          #flex-gap {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+          }
+        </style>
+
+        <textarea data-target="flex-gap-example"></textarea>
+      </section>
+
+      <p class="description">
+        Gap is a shorthand property for <code>row-gap</code> and
+        <code>column-gap</code>. It allows us to easily add space between the
+        children.
+      </p>
     </div>
 
     <!-- Flex Row (no wrap) -->
@@ -163,6 +201,41 @@
           }
         </style>
         <textarea data-target="flex-row-wrap-styles"> </textarea>
+      </section>
+
+      <p class="description">Ain't nothing here.</p>
+    </div>
+
+    <!-- Flex row wrap with gap! -->
+    <div class="flex-example">
+      <h2 class="title">Flex row wrap with gap!</h2>
+
+      <section class="visuals">
+        <div id="flex-row-wrap-gap">
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="flex-row-wrap-gap-styles">
+          #flex-row-wrap-gap {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1rem;
+          }
+        </style>
+        <textarea data-target="flex-row-wrap-gap-styles"> </textarea>
       </section>
 
       <p class="description">Ain't nothing here.</p>
