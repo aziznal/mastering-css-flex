@@ -103,3 +103,39 @@ body {
   height: 100% !important;
   width: 400px !important;
 }
+
+#table-of-contents {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background-color: #444444;
+
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+#toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#toc-list li {
+  margin-bottom: 5px;
+}
+
+#toc-list a {
+  text-decoration: none;
+}
+
+#toc-list a:hover {
+  text-decoration: underline;
+}
+
+#toc-list a {
+  color: #ffffff;
+}

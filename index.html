@@ -22,6 +22,11 @@
   <body>
     <h1 class="site-title">Flexbox Playground</h1>
 
+    <div id="table-of-contents">
+      <h2>Table of Contents</h2>
+      <ol id="toc-list"></ol>
+    </div>
+
     <!-- No Flex -->
     <div class="flex-example">
       <section class="visuals">
@@ -266,6 +271,37 @@
 
       // Set initial content of the live styles
       targetStyle.textContent = codeMirrorInstance.getValue();
+    });
+  </script>
+
+  <!-- Table of contents -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+      const tocList = document.getElementById("toc-list");
+
+      headings.forEach(function (heading) {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+
+        // Create an ID for each heading if it doesn't have one
+        if (!heading.id) {
+          heading.id = heading.textContent
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-");
+        }
+
+        // Create a link pointing to the heading
+        link.href = "#" + heading.id;
+        link.textContent = heading.textContent;
+
+        // Indent the list item according to the heading level
+        listItem.style.marginLeft =
+          (parseInt(heading.tagName.substring(1)) - 1) * 20 + "px";
+
+        listItem.appendChild(link);
+        tocList.appendChild(listItem);
+      });
     });
   </script>
 </html>
