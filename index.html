@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Master CSS Flex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
@@ -137,25 +137,155 @@
           #flex-row-wrap {
             display: flex;
             flex-flow: row wrap;
+
+            /* 
+             * uncomment this line 
+             * to see what's happening
+            */
+            /* background-color: #777777; */
+
+            /* 
+             * uncomment this line 
+             * to see what's the spacing
+             * look better
+            */
+            /* height: fit-content; */
           }
         </style>
         <textarea data-target="flex-row-wrap-styles"> </textarea>
       </section>
     </div>
 
-    <!-- Additional sections -->
+    <!-- Flex Grow -->
     <div class="flex-example">
       <section class="visuals">
-        <h2>Flex Order</h2>
-        <!-- Add your visuals here -->
+        <h2>Flex Grow</h2>
+
+        <div id="flex-grow">
+          <span class="box" id="box-1">1</span>
+          <span class="box" id="box-2">2</span>
+          <span class="box" id="box-3">3</span>
+          <span class="box" id="box-4">4</span>
+          <span class="box" id="box-5">5</span>
+        </div>
       </section>
 
       <section class="code">
-        <style id="flex-order-styles"></style>
-        <textarea data-target="flex-order-styles"> </textarea>
+        <style id="flex-grow-styles">
+          #flex-grow {
+            display: flex;
+            flex-flow: row nowrap;
+
+            width: 100%;
+          }
+
+          #flex-grow > #box-1 {
+            flex-grow: 10;
+          }
+
+          #flex-grow > #box-2 {
+            flex-grow: 5;
+          }
+        </style>
+
+        <textarea data-target="flex-grow-styles"> </textarea>
       </section>
     </div>
 
+    <!-- Flex Shrink -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Shrink</h2>
+
+        <div id="flex-shrink">
+          <span class="box" id="box-1">1</span>
+          <span class="box" id="box-2">2</span>
+          <span class="box" id="box-3">3</span>
+          <span class="box" id="box-4">4</span>
+          <span class="box" id="box-5">5</span>
+        </div>
+      </section>
+      <section class="code">
+        <style id="flex-shrink-styles">
+          #flex-shrink {
+            display: flex;
+            flex-flow: row nowrap;
+
+            width: 30%;
+
+            background-color: red;
+          }
+
+          #flex-shrink > #box-1 {
+            flex-shrink: 0;
+          }
+
+          #flex-shrink > #box-2 {
+            flex-shrink: 0;
+          }
+
+          #flex-shrink > #box-3 {
+            flex-shrink: 0;
+          }
+
+          #flex-shrink > #box-4 {
+            flex-shrink: 0;
+          }
+        </style>
+
+        <textarea data-target="flex-shrink-styles"> </textarea>
+      </section>
+    </div>
+
+    <!-- Flex Basis -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Basis</h2>
+
+        <div id="flex-basis">
+          <span class="box" id="box-1">1</span>
+          <span class="box" id="box-2">2</span>
+          <span class="box" id="box-3">3</span>
+          <span class="box" id="box-4">4</span>
+          <span class="box" id="box-5">5</span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="flex-basis-styles">
+          #flex-basis {
+            display: flex;
+            flex-flow: row nowrap;
+
+            width: 100%;
+          }
+
+          #flex-basis > #box-1 {
+            flex-basis: 10%;
+          }
+
+          #flex-basis > #box-2 {
+            flex-basis: 20%;
+          }
+
+          #flex-basis > #box-3 {
+            flex-basis: 30%;
+          }
+
+          #flex-basis > #box-4 {
+            flex-basis: 40%;
+          }
+
+          #flex-basis > #box-5 {
+            flex-basis: 50%;
+          }
+        </style>
+
+        <textarea data-target="flex-basis-styles"> </textarea>
+      </section>
+    </div>
+
+    <!-- Flex "Flex" -->
     <div class="flex-example">
       <section class="visuals">
         <h2>Flex "Flex" Property</h2>
@@ -168,62 +298,131 @@
       </section>
     </div>
 
-    <div class="flex-example">
-      <section class="visuals">
-        <h2>Flex Grow</h2>
-        <!-- Add your visuals here -->
-      </section>
-
-      <section class="code">
-        <style id="flex-grow-styles"></style>
-        <textarea data-target="flex-grow-styles"> </textarea>
-      </section>
-    </div>
-
-    <div class="flex-example">
-      <section class="visuals">
-        <h2>Flex Shrink</h2>
-        <!-- Add your visuals here -->
-      </section>
-      <section class="code">
-        <style id="flex-shrink-styles"></style>
-        <textarea data-target="flex-shrink-styles"> </textarea>
-      </section>
-    </div>
-
-    <div class="flex-example">
-      <section class="visuals">
-        <h2>Flex Basis</h2>
-        <!-- Add your visuals here -->
-      </section>
-
-      <section class="code">
-        <style id="flex-basis-styles"></style>
-        <textarea data-target="flex-basis-styles"> </textarea>
-      </section>
-    </div>
-
+    <!-- Flex Align-Self -->
     <div class="flex-example">
       <section class="visuals">
         <h2>Flex Align-Self</h2>
-        <!-- Add your visuals here -->
+
+        <div id="flex-align-self">
+          <span class="box" id="box-1">1</span>
+          <span class="box" id="box-2">2</span>
+          <span class="box" id="box-3">3</span>
+          <span class="box" id="box-4">4</span>
+          <span class="box" id="box-5">5</span>
+        </div>
       </section>
 
       <section class="code">
-        <style id="flex-align-self-styles"></style>
+        <style id="flex-align-self-styles">
+          #flex-align-self {
+            display: flex;
+            flex-flow: row nowrap;
+
+            width: 100%;
+          }
+
+          #flex-align-self > #box-1 {
+            align-self: flex-start;
+          }
+
+          #flex-align-self > #box-2 {
+            align-self: flex-end;
+          }
+
+          #flex-align-self > #box-3 {
+            align-self: center;
+          }
+
+          #flex-align-self > #box-4 {
+            align-self: baseline;
+          }
+
+          #flex-align-self > #box-5 {
+            align-self: stretch;
+          }
+        </style>
+
         <textarea data-target="flex-align-self-styles"> </textarea>
       </section>
     </div>
 
+    <!-- Flex Align-Items Stretch -->
     <div class="flex-example">
       <section class="visuals">
         <h2>Flex Align-Items Stretch</h2>
-        <!-- Add your visuals here -->
+
+        <div id="flex-align-items-stretched">
+          <span class="freeheight box">1</span>
+          <span class="freeheight box">2</span>
+          <span class="freeheight box">3</span>
+          <span class="freeheight box">4</span>
+          <span class="freeheight box">5</span>
+        </div>
       </section>
 
       <section class="code">
-        <style id="flex-align-items-stretched-styles"></style>
+        <style id="flex-align-items-stretched-styles">
+          /*
+           * note: box height has been removed 
+           */
+
+          #flex-align-items-stretched {
+            display: flex;
+            flex-flow: row nowrap;
+
+            width: 100%;
+
+            align-items: stretch;
+          }
+        </style>
+
         <textarea data-target="flex-align-items-stretched-styles"> </textarea>
+      </section>
+    </div>
+
+    <!-- Flex Order -->
+    <div class="flex-example">
+      <section class="visuals">
+        <h2>Flex Order</h2>
+
+        <div id="flex-order">
+          <span class="box" id="box-1">1</span>
+          <span class="box" id="box-2">2</span>
+          <span class="box" id="box-3">3</span>
+          <span class="box" id="box-4">4</span>
+          <span class="box" id="box-5">5</span>
+        </div>
+      </section>
+
+      <section class="code">
+        <style id="flex-order-styles">
+          #flex-order {
+            display: flex;
+            flex-flow: row;
+          }
+
+          #flex-order > #box-1 {
+            order: 0;
+          }
+
+          #flex-order > #box-2 {
+            order: -4;
+          }
+
+          #flex-order > #box-3 {
+            order: -7;
+          }
+
+          #flex-order > #box-4 {
+            order: -2;
+          }
+
+          #flex-order > #box-5 {
+            order: -1;
+          }
+        </style>
+
+        <textarea data-target="flex-order-styles"></textarea>
       </section>
     </div>
   </body>
