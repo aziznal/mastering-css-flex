@@ -53,16 +53,21 @@ body {
 }
 
 .flex-example {
-  display: flex;
-  flex-direction: row;
+  display: grid;
 
-  height: 300px;
+  grid-template-areas:
+    "title title"
+    "visuals code"
+    "description description";
+
   width: fit-content;
 
   gap: 1rem;
 }
 
 .visuals {
+  grid-area: visuals;
+
   display: flex;
 
   padding: 30px;
@@ -81,13 +86,22 @@ body {
   z-index: 1;
 }
 
-.visuals > h2 {
-  position: absolute;
+.title {
+  grid-area: title;
 
-  top: -50px;
   color: white;
 
   background: none !important;
+}
+
+.code {
+  grid-area: code;
+}
+
+.description {
+  grid-area: description;
+
+  color: white;
 }
 
 /* a border for the renderable area (i.e a box of the area inside the padding) */
